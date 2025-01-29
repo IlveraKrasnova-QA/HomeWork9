@@ -4,6 +4,7 @@ import com.codeborne.pdftest.PDF;
 import com.codeborne.xlstest.XLS;
 import com.opencsv.CSVReader;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.io.InputStream;
@@ -16,6 +17,7 @@ public class ReadingFilesTest {
     private ClassLoader cl = ReadingFilesTest.class.getClassLoader();
 
     @Test
+    @DisplayName("Поиск данных в csv файле")
     void csvFileParsingTest() throws Exception {
         try (ZipInputStream zis = new ZipInputStream(cl.getResourceAsStream("testFiles.zip"))) {
             ZipEntry entry;
@@ -35,6 +37,7 @@ public class ReadingFilesTest {
     }
 
     @Test
+    @DisplayName("Поиск данных в pdf файле")
     void pdfFileParsingTest() throws Exception {
         try (ZipInputStream zis = new ZipInputStream(cl.getResourceAsStream("testFiles.zip"))) {
             ZipEntry entry;
@@ -51,6 +54,7 @@ public class ReadingFilesTest {
     }
 
     @Test
+    @DisplayName("Поиск данных в xls файле")
     void xlsxFileParsingTest() throws Exception {
         try (ZipInputStream zis = new ZipInputStream(cl.getResourceAsStream("testFiles.zip"))) {
             ZipEntry entry;

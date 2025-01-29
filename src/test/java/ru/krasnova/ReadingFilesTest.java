@@ -58,7 +58,7 @@ public class ReadingFilesTest {
                 if (entry.getName().contains("история заказов.xlsx")) {
                     try (InputStream xlsStream = zis) {
                         XLS xls = new XLS(xlsStream);
-                        String actualValue = xls.excel.getSheetAt(0).getRow(1).getCell(4).getStringCellValue();
+                        String actualValue = xls.excel.getSheetAt(0).getRow(3).getCell(0).getStringCellValue();
                         Assertions.assertTrue(actualValue.contains("Первый заказ"));
                     }
                     break;

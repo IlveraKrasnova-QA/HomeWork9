@@ -1,0 +1,12 @@
+{
+  "conditions": "Распродажа товаров для гигиены полости рта",
+  "date_end": "2020-06-12",
+  "date_start": "2020-06-05",
+  "id": 1234,
+  "is_main": true,
+  "brands": [
+    "splat",
+    "curaprox",
+    "sensodyne"
+  ]
+}
